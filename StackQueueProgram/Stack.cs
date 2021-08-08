@@ -29,6 +29,25 @@ namespace StackQueueProgram
             this.top = node;
             Console.WriteLine("{0} pushed to stack", value);
         }
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            this.top = this.top.next;
+        }
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            else
+            {
+                Console.WriteLine("Peek element is :" + this.top.data);
+            }
+        }
         /// <summary>
         /// display stack
         /// </summary>
