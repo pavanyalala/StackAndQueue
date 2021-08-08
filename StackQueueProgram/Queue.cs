@@ -25,6 +25,22 @@ namespace StackQueueProgram
                 Console.WriteLine("{0} inserted into Queue", node.data);
             }
         }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty,Deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("Value Dequeued is {0}", this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+        }
         public void Display()
         {
             Node temp = this.head;
@@ -39,5 +55,6 @@ namespace StackQueueProgram
                 temp = temp.next;
             }
         }
+
     }
 }
